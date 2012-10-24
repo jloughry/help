@@ -1,7 +1,9 @@
 Help
 ====
 
-I'll just leave this here in case it helps somebody else some day.
+I'll just leave this here in case it might help somebody else some day.  Some of these items
+are copied from my old development blog I started on the **Radiant Mercury** program at
+Lockheed Martin.
 
 Workaround for lack of SFTP support in Sea Monkey Composer:
 -----------------------------------------------------------
@@ -83,8 +85,8 @@ That's it.
 
 As a bonus, your user will be pleased to discover that publishing in Composer is much faster now.
 
-Always specify encoding!
-------------------------
+Always specify the encoding!
+----------------------------
 
 Always specify the encoding!  When writing HTML (especially auto-generated HTML) you should
 always include the Unicode encoding informating in your header, like this:
@@ -103,4 +105,41 @@ in the `<head>` block, because that's where HTML-aware applications go looking f
 
 If you don't do this in your HTML, someday it will come back and bite you.
 
+Piping and redirecting `stderr` in `csh`
+----------------------------------------
+
+To pipe `stderr` along with `stdout`, do:
+
+	% cmd1 |& cmd2
+
+To redirect `stderr` by itself to file `f1` and `stdout` to file `f2`, do:
+
+	% (cmd > f1) >& f2,
+
+Source: Daniel Gilley. *UNIX in a Nutshell* second edition.  Sebastopol, California:
+O'Reilly & Associates, 1994.
+
+Concatenating PDF files
+-----------------------
+
+If you have Ghostscript installed, do this:
+
+	% set path=d:\work_in_progress\tools\gs\gs7.04\lib;d:\work_in_\
+	progress\tools\gs\gs7.04\bin;%PATH%
+	% gswin32.exe -sPAPERSIZE=letter -dNOPAUSE -dBATCH \
+	-sDEVICE=pdfwrite -sOutputFile=result.pdf file1.pdf [file2.pdf...]
+
+Useful UNIX commands
+--------------------
+
+`pfiles` *pid* will give a list of file descriptors currently open by process ID *pid*.
+
+Choose the file descriptor you want and look for the `ino:` *nnnnn* field.  That is the
+inode of the file.  To get the name of the file, do `% find . -inum` *nnnnn*, or
+`% ls -i | grep` *nnnnn* `/usr/proc/bin/pfiles`
+
+More lessons learnt
+-------------------
+
+abc
 
