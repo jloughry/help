@@ -83,7 +83,8 @@ That's it.
 			echo "\nElapsed time $elapsed_time seconds." >> $reportfile
 	fi
 
-As a bonus, your user will be pleased to discover that publishing in Composer is much faster now.
+As a bonus, your user will be pleased to discover that publishing in Composer is almost
+instantaneous now.
 
 Always specify the encoding!
 ----------------------------
