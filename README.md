@@ -37,6 +37,8 @@ it securely).  This will ensure that `rsync` can run automatically.
 
 6. Set up a cron job on the user's machine to run the following script once every minute:
 
+That's it.
+
 	#!/bin/sh
 
 	#
