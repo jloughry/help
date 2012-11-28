@@ -139,8 +139,10 @@ Choose the file descriptor you want and look for the `ino:` *nnnnn* field.  That
 inode of the file.  To get the name of the file, do `% find . -inum` *nnnnn*, or
 `% ls -i | grep` *nnnnn* `/usr/proc/bin/pfiles`
 
-More lessons learnt
--------------------
+GitHub error `Commit failed: Failed to create a new commit.`
+------------------------------------------------------------
 
-abc
+This error from GitHub for Windows is caused by low disk space on the local volume containing the
+repository.  Less than 4.9 gigabytes free: the error occurs.  Freeing up some space makes the
+problem go away.
 
