@@ -146,3 +146,9 @@ This error from GitHub for Windows is caused by low disk space on the local volu
 repository.  Less than 4.9 gigabytes free: the error occurs.  Freeing up some space makes the
 problem go away.
 
+Searching and replacing hex characters in `vi` (not vim)
+--------------------------------------------------------
+
+`:g/\%x94/s//"/g
+
+
