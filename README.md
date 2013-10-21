@@ -167,4 +167,17 @@ How to set metadata in PDF files made by LaTeX
     \hypersetup{pdfsubject=computer security}
     \hypersetup{pdfkeywords={doctoral thesis}}
 
+How to use up space on a Mac OS X disk volume for testing
+---------------------------------------------------------
+
+Use `mkfile`
+
+    % mkfile -nv 20g 20gig_file
+
+It's not fast, though. The available disk space goes down immediately, but the command hangs for a
+long time writing zeros to the file. Stackoverflow suggests a faster method using `dd` and `seek`:
+
+    % dd if=/dev/zero of=filename bs=1 count=0 seek=200G
+
+The `dd` method is no faster, though, and it's harder to interrupt with Ctrl-C.
 
