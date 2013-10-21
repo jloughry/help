@@ -149,6 +149,22 @@ problem go away.
 Searching and replacing hex characters in `vi` (not vim)
 --------------------------------------------------------
 
-`:g/\%x94/s//"/g
+    `:g/\%x94/s//"/g
+
+How to set metadata in PDF files made by LaTeX
+----------------------------------------------
+
+    % Tell Adobe Acrobat Reader not to display the bookmarks pane.
+    \hypersetup{pdfpagemode=UseNone}
+
+    % Tell it to start in my preferred size and skip front matter.
+    \hypersetup{pdfstartview=FitH}
+    \hypersetup{pdfstartpage=12}
+
+    % Fill in some other information in the PDF header.
+    \hypersetup{pdftitle=Security Test and Evaluation of Cross Domain Systems}
+    \hypersetup{pdfauthor=Joe Loughry}
+    \hypersetup{pdfsubject=computer security}
+    \hypersetup{pdfkeywords={doctoral thesis}}
 
 
