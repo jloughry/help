@@ -181,3 +181,23 @@ long time writing zeros to the file. Stackoverflow suggests a faster method usin
 
 The `dd` method is no faster, though, and it's harder to interrupt with Ctrl-C.
 
+Workaround for lost `.virtualmail` wildcard functionality
+---------------------------------------------------------
+
+[Hurricane Electric](http://www.he.net/), a *great* web hosting and colocation company, recently
+started disabling `.virtualmail` wildcarding functionality, which I depended on for *ad hoc* email
+addresses. The workaround is simple, because they allow me to create new mailboxes, and set
+forwarding on them. Forwarding can even be done to accounts on other systems, although doing that
+is discouraged because it attracts spammers.
+
+I created a bunch of new mailboxes that forward to my real mailbox:
+
+    - mailto:joe.loughry@applied-math.org forwards to mailto:joe@applied-math.org
+    - mailto:rjl@applied-math.org forwards to mailto:joe@applied-math.org
+    - mailto:joe@applied-math.org forwards to mailto:joe@applied-math.org
+    - mailto:loughry@applied-math.org forwards to mailto:joe@applied-math.org
+
+Messages sent to any of these addresses show up in one place, and their 'From:' address is
+preserved so I can tell where it came from and notify the sender that they need to update their
+address books.
+
