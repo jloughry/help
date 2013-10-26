@@ -201,3 +201,8 @@ Messages sent to any of these addresses show up in one place, and their 'From:' 
 preserved so I can tell where it came from and notify the sender that they need to update their
 address books.
 
+How to display UNIX boot time messages in Mac OS X
+--------------------------------------------------
+
+To see more information in Mac OS X, `sudo nvram boot-args="-v"` in Terminal.
+
