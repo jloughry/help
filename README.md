@@ -2,7 +2,7 @@ Help
 ====
 
 I'll just leave this here in case it might help somebody else some day.  Some of these items
-are copied from my old development blog I started on the **Radiant Mercury** program at
+are copied from my old development blog I started on the **Radiant Mercury** programme at
 Lockheed Martin.
 
 Workaround for lack of SFTP support in Sea Monkey Composer:
