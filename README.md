@@ -22,7 +22,7 @@ security.
 2. Create a directory in the user's home directory called `~/proxy_for_website/`
 
 3. Inside that directory, mimic the directory structure that exists already at the web hosting
-company, e.g., `~/public_html` and `~/secure_html` and all subdirectories that might exist
+company, e.g., `~/public_html` and `~/secure_html` and all sub-directories that might exist
 below them.
 
 4. Inside Sea Monkey Composer, change the *Publish As...* settings as follows:
@@ -90,7 +90,7 @@ Always specify the encoding!
 ----------------------------
 
 Always specify the encoding!  When writing HTML (especially auto-generated HTML) you should
-always include the Unicode encoding informating in your header, like this:
+always include the Unicode encoding information in your header, like this:
 
 	<html>
 	   <head>
@@ -184,7 +184,7 @@ The `dd` method is no faster, though, and it's harder to interrupt with Ctrl-C.
 Workaround for lost `.virtualmail` wildcard functionality
 ---------------------------------------------------------
 
-[Hurricane Electric](http://www.he.net/), a *great* web hosting and colocation company, recently
+[Hurricane Electric](http://www.he.net/), a *great* web hosting and co-location company, recently
 started disabling `.virtualmail` wildcarding functionality, which I depended on for *ad hoc* email
 addresses. The workaround is simple, because they allow me to create new mailboxes, and set
 forwarding on them. Forwarding can even be done to accounts on other systems, although doing that
