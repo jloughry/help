@@ -1,25 +1,16 @@
-include ../Makefiles/git1.mk
+readme = README.md
 
 all:
 	@echo "There is nothing to build in this directory."
 
-include ../Makefiles/git2.mk
-
 vi:
-	vi $(documentation)
-
-notes:
-	(cd ../notes && make vi)
-
-quotes:
-	(cd ../notes && make quotes)
-
-bibtex:
-	(cd ../bibtex && make vi)
+	vi $(readme)
 
 spell:
-	aspell --lang=en_GB check $(documentation)
+	aspell --lang=en_GB check $(readme)
 
 clean:
-	rm -f $(documentation).bak
+	@echo "\"make clean\" doesn't do anything here."
+
+include common.mk
 
