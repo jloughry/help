@@ -1,1 +1,1 @@
-commit after running `make repair-git-blame`
+added rsync options to report only the changes that rsync(1) made on the remote end

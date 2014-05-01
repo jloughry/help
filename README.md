@@ -206,3 +206,12 @@ How to display UNIX boot time messages in Mac OS X
 
 To see more information in Mac OS X, `sudo nvram boot-args="-v"` in Terminal.
 
+How to get `rsync(1)` to report only the files it changed
+---------------------------------------------------------
+
+    rsync -cir local_directory/ user@remote_host:remote_directory/
+
+The `-c` option tells it to compare checksums instead of date/time; `-i` itemises
+the changes it makes, and `-r` recurses into sub-directories.
+
+
