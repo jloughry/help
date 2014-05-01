@@ -1,1 +1,1 @@
-added rsync options to report only the changes that rsync(1) made on the remote end
+fix MS-DOS line endings (where did those come from?) in README.md
