@@ -246,9 +246,8 @@ $ipfw_cmd -f flush
 # Throttle only connections made outgoing by Bitcoin Core.
 
 $ipfw_cmd pipe 1 config bw 200Kbit/s
-$ipfw_cmd add 50 pipe 1 src-port 8333
+$ipfw_cmd add 50 pipe 1 dst-port 8333
 
-$ipfw_cmd list
 $ipfw_cmd pipe 1 show
 ````
 
