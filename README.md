@@ -251,3 +251,23 @@ $ipfw_cmd add 50 pipe 1 dst-port 8333
 $ipfw_cmd pipe 1 show
 ````
 
+How to get the PID of a running process *reliably*
+--------------------------------------------------
+
+To get the process ID of a running process in Bash, it is necessary to
+pre-process the output from `ps` before parsing it with `cut`, like this:
+
+````
+/bin/echo -n "Starting Tor..."
+
+tor --quiet -f $torrcLoc &
+
+pid=`ps ax | grep "[t]or --quiet -f" | tr -s " " | cut -d ' ' -f 2`
+
+if [[ $pid -ne 0 ]]; then
+    echo "the process was started with PID $pid."
+else
+    echo "a problem occurred."
+fi
+````
+
