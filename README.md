@@ -233,7 +233,7 @@ function are_we_running_as_root_interrogative
 {
     if [[ $EUID -ne 0 ]]; then
         echo "Run this script as:"
-        echo "    $ sudo $0"
+        echo "    $ sudo ./$0"
         exit 1
     else
         echo "The script is running as root."
