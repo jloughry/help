@@ -214,4 +214,41 @@ How to get `rsync(1)` to report only the files it changed
 The `-c` option tells it to compare checksums instead of date/time; `-i` itemises
 the changes it makes, and `-r` recurses into sub-directories.
 
+How to throttle traffic selectively in Mac OS X
+-----------------------------------------------
+
+Use `ipfw` to throttle a particular protocol, *e.g.*, a Bitcoin Core client
+operating on 8333/TCP, like this:
+
+````
+#/bin/sh
+
+ipfw_cmd=/sbin/ipfw
+
+#
+# This function checks to see if the script is running with root privs.
+#
+
+function are_we_running_as_root_interrogative
+{
+    if [[ $EUID -ne 0 ]]; then
+        echo "Run this script as:"
+        echo "    $ sudo $0"
+        exit 1
+    else
+        echo "The script is running as root."
+    fi
+}
+
+are_we_running_as_root_interrogative
+$ipfw_cmd -f flush
+
+# Throttle only connections made outgoing by Bitcoin Core.
+
+$ipfw_cmd pipe 1 config bw 25Kbytes/s
+$ipfw_cmd add 50 pipe 1 tcp from me 8333 to any
+
+$ipfw_cmd list
+$ipfw_cmd pipe 1 show
+````
 
